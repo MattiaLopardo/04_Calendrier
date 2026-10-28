@@ -5,4 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(04_Calendrier
         04_Calendrier.cpp
+        boucles_affichage.h
+        boucles_affichage.cpp
+        Calcul.h
+        Calcul.cpp
 )
