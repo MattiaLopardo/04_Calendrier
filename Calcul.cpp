@@ -12,6 +12,52 @@
 
 using namespace std;
 
+int calcul_compteur31(const array <int,31>& mois31,int compteur) {
+
+    for (size_t i = 0; i < mois31.size(); i++) {
+        if (compteur == 7) {
+            compteur = 0;
+        }
+        ++compteur;
+    }
+    return compteur;
+}
+
+int calcul_compteur30(const array <int,30>& mois30,int compteur) {
+
+    for (size_t i = 0; i < mois30.size(); i++) {
+        if (compteur == 7) {
+            compteur = 0;
+        }
+        ++compteur;
+    }
+    return compteur;
+}
+
+int calcul_compt_fevrier(const int& annee,int compteur) {
+
+    if (bissextile(annee)) {
+        array <int,29> février {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
+        for (size_t i = 0; i < février.size(); i++) {
+            if (compteur == 7) {
+                compteur = 0;
+            }
+            ++compteur;
+        }
+        return compteur;
+    }
+    else {
+        array <int,28> février {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28};
+        for (size_t i = 0; i < février.size(); i++) {
+            if (compteur == 7) {
+                compteur = 0;
+            }
+            ++compteur;
+        }
+        return compteur;
+    }
+}
+
 bool bissextile(const int& annee) {
 
     if ((annee % 100 != 0 and annee % 4 == 0) or annee % 400 == 0) {

@@ -27,5 +27,7 @@ int main() {
 
     affichage(jours, annee, mois31, mois30);
 
-    cout << calcul_jours(annee);
+    //cout << calcul_jours(annee);
+
+
 }
