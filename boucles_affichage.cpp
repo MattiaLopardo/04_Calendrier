@@ -17,6 +17,7 @@ using namespace std;
 void boucletableau31(const array <int,31>& mois31,int compteur) {
 
     for (size_t i = 0; i < mois31.size(); i++) {
+
         cout << left << mois31.at(i) << setw(3);
         if (compteur == 7) {
             cout << endl;
@@ -77,7 +78,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right<< jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_jours(annee); i++) {
-        cout << left << " " << setw(3);
+        if (calcul_jours(annee) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31, calcul_jours(annee)+1);
@@ -87,7 +93,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31, calcul_jours(annee)); i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31, calcul_jours(annee)) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
 
@@ -98,7 +109,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))); i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1)));
@@ -108,7 +124,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))); i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1))));
@@ -118,7 +139,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))) ; i++) {
-        cout << left << " " << setw(3);
+       if (calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))) == 7) {
+           break;
+       }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1)))));
@@ -128,7 +154,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))));i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1))))));
@@ -138,7 +169,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))));i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1)))))));
@@ -148,7 +184,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))) ;i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1))))))));
@@ -158,7 +199,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))));i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1)))))))));
@@ -168,7 +214,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))))) ; i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1))))))))));
@@ -178,7 +229,12 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))))))))) ; i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee))))))))))) == 7) {
+            break;
+        }
+        else {
+            cout << left << " " << setw(3);
+        }
     }
 
     boucletableau30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1)))))))))));
@@ -188,7 +244,10 @@ void affichage(const array <char,7>& jours, const int& annee, const array<int, 3
         cout << right << jours.at(i) << setw(3);
     } cout << endl;
     for (int i = 0; i < calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))))))) ; i++) {
-        cout << left << " " << setw(3);
+        if (calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)))))))))))) == 7) {
+            break;
+        }
+        else {cout << left << " " << setw(3);}
     }
 
     boucletableau31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compteur30(mois30,calcul_compteur31(mois31,calcul_compt_fevrier(annee, calcul_compteur31(mois31, calcul_jours(annee)+1))))))))))));
