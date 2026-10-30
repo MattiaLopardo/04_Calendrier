@@ -14,7 +14,7 @@ using namespace std;
 #ifndef INC_04_CALENDRIER_CALCUL_H
 #define INC_04_CALENDRIER_CALCUL_H
 
-bool bissextile(int annee);
+bool bissextile(const int& annee);
 
 int calcul_jours(int annee);
 

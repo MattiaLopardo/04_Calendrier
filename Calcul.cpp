@@ -12,7 +12,7 @@
 
 using namespace std;
 
-bool bissextile(int annee) {
+bool bissextile(const int& annee) {
 
     if ((annee % 100 != 0 and annee % 4 == 0) or annee % 400 == 0) {
         return true;
@@ -27,17 +27,17 @@ int calcul_jours(int annee) {
     int ref = 2018;
 
     if (annee < 2018) {
-        int calculannee = annee;
+        //int calculannee = annee;
         int diff = 2018 - annee;
         int jours = diff*31*7 + diff*30*4;
         for (int i = 0; i < diff; i++) {
-            if (bissextile(calculannee)) {
+            if (bissextile(annee)) {
                 jours += 29;
-                ++calculannee;
+                ++annee;
             }
             else {
                 jours += 28;
-                ++calculannee;
+                ++annee;
             }
 
         }

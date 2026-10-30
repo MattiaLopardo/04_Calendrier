@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void boucletableau31(array <int,31> mois31,int compteur) {
+void boucletableau31(const array <int,31>& mois31,int compteur) {
 
     for (size_t i = 0; i < mois31.size(); i++) {
         cout << left << mois31.at(i) << setw(3);
@@ -26,7 +26,7 @@ void boucletableau31(array <int,31> mois31,int compteur) {
     cout << endl;
 }
 
-void boucletableau30(array<int,30> mois30,int compteur){
+void boucletableau30(const array<int,30>& mois30,int compteur){
     compteur = 1;
     for (size_t i = 0; i < mois30.size(); i++) {
         cout << left << mois30.at(i) << setw(3);
@@ -40,7 +40,7 @@ void boucletableau30(array<int,30> mois30,int compteur){
     cout << endl;
 }
 
-void fevrier(int annee,int compteur) {
+void fevrier(const int& annee,int compteur) {
     compteur = 1;
     if (bissextile(annee)) {
         array <int,29> février {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
@@ -69,7 +69,7 @@ void fevrier(int annee,int compteur) {
     }
 }
 
-void affichage(array <char,7> jours, int annee, array<int, 31> mois31, array<int, 30> mois30) {
+void affichage(const array <char,7>& jours, const int& annee, const array<int, 31>& mois31, const array<int, 30>& mois30) {
     cout << "janvier " << annee << endl;
     for (size_t i = 0; i < jours.size(); i++) {
         cout << right<< jours.at(i) << setw(3);
